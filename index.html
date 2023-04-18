@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>golf</title>
+    <!-- 파비콘 -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.png" />
     <!-- css 연결 -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -18,6 +20,10 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Poiret+One&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/3882d493de.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- script 연결 -->
     <script src="js/script.js" defer></script>
   </head>
@@ -33,35 +39,35 @@
         <nav id="gnb">
           <ul>
             <li>
-              <a href="#">메인메뉴1</a>
+              <a href="#">ABOUT</a>
+              <ul>
+                <li><a href="sub.html">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴2</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">COURSE</a>
               <ul>
                 <li><a href="#">서브메뉴1</a></li>
                 <li><a href="#">서브메뉴2</a></li>
               </ul>
             </li>
             <li>
-              <a href="#">메인메뉴2</a>
+              <a href="#">FACILTIES</a>
               <ul>
                 <li><a href="#">서브메뉴1</a></li>
                 <li><a href="#">서브메뉴2</a></li>
               </ul>
             </li>
             <li>
-              <a href="#">메인메뉴3</a>
+              <a href="#">NEWS</a>
               <ul>
                 <li><a href="#">서브메뉴1</a></li>
                 <li><a href="#">서브메뉴2</a></li>
               </ul>
             </li>
             <li>
-              <a href="#">메인메뉴4</a>
-              <ul>
-                <li><a href="#">서브메뉴1</a></li>
-                <li><a href="#">서브메뉴2</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">메인메뉴5</a>
+              <a href="#">MEMBERS LOUNGE</a>
               <ul>
                 <li><a href="#">서브메뉴1</a></li>
                 <li><a href="#">서브메뉴2</a></li>
@@ -93,6 +99,21 @@
         </div>
 
         <div class="widget-wrap">
+          <div class="widget">
+            <div style="float: left">
+              <div class="weather_icon"></div>
+            </div>
+            <br />
+
+            <div class="weather-text">
+              <div class="temp_min"></div>
+              <div class="temp_max"></div>
+              <div class="wind"></div>
+            </div>
+            <div style="float: left">
+              <div class="city" style="font-size: 13pt"></div>
+            </div>
+          </div>
           <ul>
             <li class="home">
               <a href="#"><span>Home</span></a>
@@ -104,15 +125,21 @@
               <a href="#"><span>Restaurant</span></a>
             </li>
             <li class="roadmap">
-              <a href="#"><span>Road Map</span></a>
+              <a href="https://map.naver.com/v5/entry/place/19816550?c=15,0,0,0,dh"target="_blank"><span>Road Map</span></a>
             </li>
             <li class="instagram">
-              <a href="#" target="_blank" title="에콜리안 인스타그램 (새창)"
+              <a
+                href="https://www.instagram.com/explore/tags/%EC%97%90%EC%BD%9C%EB%A6%AC%EC%95%88/"
+                target="_blank"
+                title="에콜리안 인스타그램 (새창)"
                 ><span>Instagram</span></a
               >
             </li>
             <li class="email">
-              <a href="#" target="_blank" title="메일 보내기 (새창)"
+              <a
+                href="mailto:abbcaog000@gmail.com"
+                target="_blank"
+                title="메일 보내기 (새창)"
                 ><span>Mail</span></a
               >
             </li>
@@ -145,7 +172,7 @@
               <li class="login">
                 <a href="#">
                   <span>MEMBERS LOGIN</span>
-                  <span>블랙스톤 제주 멤버쉽 로그인</span>
+                  <span>에콜리안C.C 로그인</span>
                 </a>
               </li>
             </ul>
@@ -154,5 +181,52 @@
         </div>
       </div>
     </div>
+    <!------------------------------------------------------
+                    모달 로그인폼
+  ---------------------------------------------------------->
+    <!-- <div class="modal-login">
+      <h1>
+        <a href="#"><img src="images/login-logo-1.png" alt="에콜리안" /></a>
+      </h1>
+      <main>
+        <form action="#" method="post" id="loginFrm">
+          <fieldset>
+            <legend class="skip">로그인양식</legend>
+            <ul>
+              <li>
+                <span class="id_bg"></span>
+                <span
+                  ><input
+                    type="text"
+                    name="user_id"
+                    placeholder="아이디 (이메일)"
+                /></span>
+              </li>
+              <li class="error id_error">아이디(이메일)을 입력해주세요</li>
+              <li>
+                <span class="pw_bg"></span>
+                <span
+                  ><input type="password" name="user_pw" placeholder="비밀번호"
+                /></span>
+                <span class="pw_show_hide" title="문자보이기"></span>
+              </li>
+              <li class="error pw_error">비밀번호를 입력해주세요</li>
+            </ul>
+            <div class="btm">
+              <p>
+                <label>
+                  <input type="checkbox" name="login_y" id="login_y" />
+                  <span>자동로그인</span>
+                </label>
+              </p>
+              <a href="#" class="idpw_search">아이디(이메일)/비밀번호찾기</a>
+            </div>
+            <button type="submit" id="login_btn">로그인</button>
+          </fieldset>
+        </form>
+        <a href="#" class="join_link">회원가입</a>
+      </main>
+      <footer>&copy; Ecolian Corp. All rights reserved.</footer>
+    </div> -->
   </body>
 </html>
