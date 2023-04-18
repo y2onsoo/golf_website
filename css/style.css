@@ -278,7 +278,9 @@ body.main .btn-personal {
   display: block;
   clear: both;
 }
-
+/***************************************************
+                    widget-wrap
+***************************************************/
 .widget-wrap {
   animation-delay: 0.2s;
 }
@@ -303,7 +305,9 @@ body.main .btn-personal {
   transition: all 0.4s;
   z-index: 9;
 }
-
+/***************************************************
+                    bottom-wrap
+***************************************************/
 .bottom-wrap {
   display: block;
   animation-delay: 0.4s;
@@ -411,6 +415,10 @@ header,
   padding: 8px 0;
 }
 
+.inner .news a:hover span {
+  border-bottom: 1px solid #fff;
+}
+
 .bottom-wrap .inner li.exhibition {
   height: 1px;
 }
@@ -506,7 +514,9 @@ a:visited,
 a:hover {
   color: #444;
 }
-
+/***************************************************
+                  wideget 
+***************************************************/
 .widget-wrap .weather {
   text-align: center;
   margin-top: 20px;
@@ -660,112 +670,184 @@ a:hover {
 /***********************************************************
                       modal-login
 **************************************************************/
-/* .modal-login{
+.modal-login-bg{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(14, 13, 13, 0.5);
+  display: none;
+  z-index: 9998;
+}
+.modal-login {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   z-index: 9999;
   background-color: #fff;
-  width: 100%;
-  height: 100%;
+  width: 600px;
+  height: 800px;
   display: none;
-  
 }
-h1{text-align: center; margin: 50px auto 30px;}
-/* h1 a{} */
-/* h1 a img{width: 200px;object-fit: cover;} */
-main{ width: 500px;margin: 0 auto;}
-main #loginFrm{ 
+h1.modal-logo {
+  text-align: center;
+  margin: 50px auto 30px;
+  margin-top: 150px;
+}
+h1 button {
+  margin-left: 300px;
+}
+h1 a img {
+  width: 200px;
+  object-fit: cover;
+}
+main {
+  width: 500px;
+  margin: 0 auto;
+}
+main #loginFrm {
   border-bottom: 1px solid #ccc;
   margin-bottom: 20px;
-  padding-bottom: 20px;}
-main #loginFrm fieldset{}
-main #loginFrm fieldset ul li{
-  border: 1px solid #ccc; background-color: #fff;
-  display: flex; flex-flow: row nowrap;
+  padding-bottom: 20px;
+}
+main #loginFrm fieldset {
+}
+main #loginFrm fieldset ul li {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  display: flex;
+  flex-flow: row nowrap;
   margin-bottom: 10px;
   position: relative;
 }
-main #loginFrm fieldset ul .error{
-  color:#e7223d ;
-  padding: 10px; display: none;
+main #loginFrm fieldset ul .error {
+  color: #e7223d;
+  padding: 10px;
+  display: none;
 }
-main #loginFrm fieldset ul .id_error{border: 0;}
-main #loginFrm fieldset ul .pw_error{border: 0;}
-main #loginFrm fieldset ul li span{}
-main #loginFrm fieldset ul li .id_bg{
+main #loginFrm fieldset ul .id_error {
+  border: 0;
+}
+main #loginFrm fieldset ul .pw_error {
+  border: 0;
+}
+main #loginFrm fieldset ul li span {
+}
+main #loginFrm fieldset ul li .id_bg {
   border-right: 1px solid #ccc;
-  padding: 20px; width: 50px;
+  padding: 20px;
+  width: 50px;
   background-color: #f5f5f5;
   position: relative;
 }
-main #loginFrm fieldset ul li .id_bg::after{
-  content: '';display: block;
+main #loginFrm fieldset ul li .id_bg::after {
+  content: "";
+  display: block;
   background-image: url(../images/login-logo.svg);
   background-position: 0 0;
-  width: 21px; height: 21px;
-  position: absolute;left: 14px; top: 11px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  left: 14px;
+  top: 11px;
 }
-main #loginFrm fieldset ul li .pw_bg{
+main #loginFrm fieldset ul li .pw_bg {
   border-right: 1px solid #ccc;
-  padding: 20px; width: 50px;
+  padding: 20px;
+  width: 50px;
   background-color: #f5f5f5;
   position: relative;
 }
-main #loginFrm fieldset ul li .pw_bg::after{
-  content: '';display: block;
+main #loginFrm fieldset ul li .pw_bg::after {
+  content: "";
+  display: block;
   background-image: url(../images/login-logo.svg);
   background-position: -21px 0;
-  width: 21px; height: 21px;
-  position: absolute;left: 14px; top: 11px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  left: 14px;
+  top: 11px;
 }
-main #loginFrm fieldset ul li span input{width: 400px; height: 40px; border: 0; padding-left: 5px;}
-main #loginFrm fieldset ul li span input::placeholder{font-size: 0.95rem; color:#aaa;}
-main #loginFrm fieldset ul li span input[type=text]{}
-main #loginFrm fieldset ul li span input[type=password]{}
-main #loginFrm fieldset ul li .pw_show_hide{
+main #loginFrm fieldset ul li span input {
+  width: 400px;
+  height: 40px;
+  border: 0;
+  padding-left: 5px;
+}
+main #loginFrm fieldset ul li span input::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+}
+main #loginFrm fieldset ul li span input[type="text"] {
+}
+main #loginFrm fieldset ul li span input[type="password"] {
+}
+main #loginFrm fieldset ul li .pw_show_hide {
   background-image: url(../images/login-logo.svg);
   background-position: -105px 0;
-  width: 21px; height: 21px;
-  position: absolute; right: 11px; top: 8px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  right: 11px;
+  top: 8px;
 }
-main #loginFrm fieldset .btm{
-  display: flex; flex-flow: row nowrap;
+main #loginFrm fieldset .btm {
+  display: flex;
+  flex-flow: row nowrap;
   padding: 15px 0;
-  justify-content:space-between;
+  justify-content: space-between;
 }
-main #loginFrm fieldset .btm p label{}
-main #loginFrm fieldset .btm p label input[name=login_y]{appearance: none;}
-main #loginFrm fieldset .btm p label input[name=login_y] + span::before {
+main #loginFrm fieldset .btm p label {
+}
+main #loginFrm fieldset .btm p label input[name="login_y"] {
+  appearance: none;
+}
+main #loginFrm fieldset .btm p label input[name="login_y"] + span::before {
   background-color: #fff;
   border: 1px solid #ccc;
-  content: ''; display:inline-block;
-  width: 17px; height: 17px;
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
   background-image: url(../images/login-logo.svg);
   background-position: -65px -22px;
   margin-right: 5px;
 }
-main #loginFrm fieldset .btm p label input[name=login_y]:checked + span::before {
+main
+  #loginFrm
+  fieldset
+  .btm
+  p
+  label
+  input[name="login_y"]:checked
+  + span::before {
   background-position: -84px -21px;
 }
-main #loginFrm fieldset .btm p label span{}
-main #loginFrm fieldset .btm .idpw_search{color:#3c4752;}
-main #loginFrm fieldset .btm .idpw_search::after{
-  content: '';display: inline-block;
-  width: 8px; height: 15px;
+main #loginFrm fieldset .btm p label span {
+}
+main #loginFrm fieldset .btm .idpw_search {
+  color: #3c4752;
+}
+main #loginFrm fieldset .btm .idpw_search::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 15px;
   background-image: url(../images/login-logo.svg);
   background-position: -104px -21px;
-  margin-left:5px;
+  margin-left: 5px;
 }
-main #loginFrm fieldset  #login_btn{
+main #loginFrm fieldset #login_btn {
   background: #354759;
-  width:100%;
+  width: 100%;
   color: #fff;
   padding: 20px 0;
   box-shadow: 0 2px 0 #26323f;
 }
-main .join_link{
+main .join_link {
   border: 1px solid #aaa;
   color: #354759;
   padding: 20px 0;
@@ -775,6 +857,9 @@ main .join_link{
   background-color: #fff;
   box-shadow: 0 2px 0 #eee;
 }
-footer{
-  text-align: center; font-size: 0.85rem; margin-top: 20px;
-color: #333;} */
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 20px;
+  color: #333;
+}
