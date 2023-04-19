@@ -13,7 +13,7 @@ var weatherIcon = {
 
 // 날씨 api - 강원도
 var apiURI =
-  "http://api.openweathermap.org/data/2.5/weather?q=" +
+  "https://api.openweathermap.org/data/2.5/weather?q=" +
   "gangwon-do" +
   "&appid=" +
   "cdad16695eef24059c08fb46ef92409f";
@@ -92,9 +92,20 @@ window.onload = function () {
   });
 };
 
-$(".login").click(function () {
-  $(".modal-login,.modal-login-bg").show();
-});
-$(".close-btn").click(function () {
-  $(".modal-login,.modal-login-bg").hide();
-});
+////////////////////////////widget 모달 모음
+window.onload = function () {
+  $(".login").click(function () {
+    $(".modal-login,.modal-login-bg").show();
+  });
+  $(".close-btn").click(function () {
+    $(".modal-login,.modal-login-bg").hide();
+  });
+  //
+  $(".course span").click(function () {
+    $(".mo-widget-wrap,.mo-widget-course").show();
+  });
+  $(".mo-course-close").click(function () {
+    $(".mo-widget-wrap,.mo-widget-course").hide();
+  });
+  //
+};
