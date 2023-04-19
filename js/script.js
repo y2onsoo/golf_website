@@ -109,3 +109,22 @@ window.onload = function () {
   });
   //
 };
+
+
+
+// ///////////////////sub페이지-슬라이더
+const swiper1 = new Swiper(".first-slide", {
+  direction: "horizontal",
+  loop: true,
+  spaceBetween: 0,
+  slidesPerView: "auto",
+  speed: 4000,
+  // effect: "fade",
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
