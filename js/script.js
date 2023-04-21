@@ -108,6 +108,12 @@ window.onload = function () {
     $(".mo-widget-wrap,.mo-widget-course").hide();
   });
   //
+  $(".ham-bar").click(function(){
+    $("#gnb.mo-gnb").show();
+  });
+  // $(".ham-bar").click(function(){
+  //   $("#gnb.mo-gnb").hide();
+  // });
 };
 
 
@@ -128,3 +134,13 @@ const swiper1 = new Swiper(".first-slide", {
     el: ".swiper-pagination",
   },
 });
+
+
+
+
+
+////////////////////////////미디어퀴리 
+//모바일사이즈 햄버거바 
+window.onload = function () {
+
+}
