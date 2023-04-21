@@ -662,9 +662,9 @@ a:hover {
 }
 
 .weather_icon {
-  font-size: 10px;
+  font-size: 9px;
   margin-top: 20px;
-  margin-left: 5px;
+  margin-left: 2px;
 }
 
 .weather-text {
@@ -1524,9 +1524,6 @@ footer {
     border-bottom: 1px solid #fff;
   }
 
-  .bottom-wrap .inner li.exhibition {
-    /* height: 1px; */
-  }
 
   .bottom-wrap .inner>ul>li:last-child {
     margin-right: 0;
@@ -1540,6 +1537,14 @@ footer {
   .m-visible {
     display: none;
   }
+
+.exhibition{
+  display: none;
+}
+
+.bottom-wrap .inner ul{
+  width: 100%;
+}
 
   .bottom-wrap .inner li.login>a {
     border: solid 2px #ac8b60;
@@ -3000,7 +3005,6 @@ footer {
     padding-bottom: 20px;
   }
 
-  main #loginFrm fieldset {}
 
   main #loginFrm fieldset ul li {
     border: 1px solid #ccc;
@@ -3025,7 +3029,6 @@ footer {
     border: 0;
   }
 
-  main #loginFrm fieldset ul li span {}
 
   main #loginFrm fieldset ul li .id_bg {
     border-right: 1px solid #ccc;
@@ -3079,9 +3082,6 @@ footer {
     color: #aaa;
   }
 
-  main #loginFrm fieldset ul li span input[type="text"] {}
-
-  main #loginFrm fieldset ul li span input[type="password"] {}
 
   main #loginFrm fieldset ul li .pw_show_hide {
     background-image: url(../images/login-logo.svg);
@@ -3100,7 +3100,6 @@ footer {
     justify-content: space-between;
   }
 
-  main #loginFrm fieldset .btm p label {}
 
   main #loginFrm fieldset .btm p label input[name="login_y"] {
     appearance: none;
@@ -3122,7 +3121,6 @@ footer {
     background-position: -84px -21px;
   }
 
-  main #loginFrm fieldset .btm p label span {}
 
   main #loginFrm fieldset .btm .idpw_search {
     color: #3c4752;
