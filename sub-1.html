@@ -56,7 +56,7 @@
       href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
     />
     <!-- script 연결 -->
-    <script src="js/script.js" defer></script>
+    <script src="js/sub-1.js" defer></script>
   </head>
   <body class="main">
     <!------------------------------------------------------
@@ -79,8 +79,8 @@
             <li>
               <a href="#">RESERVE</a>
               <ul>
-                <li><a href="sub-1.html">코스 소개</a></li>
-                <li><a href="#">위치</a></li>
+                <li><a href="sub-1.html">실시간예약</a></li>
+                <li><a href="#">예약현황</a></li>
               </ul>
             </li>
             <li>
@@ -193,12 +193,33 @@
             <p>reservation</p>
           </div>
           <div class="reserve-date-wrap">
-            <h1>실시간예약</h1>
-            <p class="dates">afdsasdf</p>
+            <h1></h1>
+            <div class="date"></div>
           </div>
         </div>
-
-        <!---------------------------------------------------------------------
+<!------------------------------------------------------------
+                      widget-modal-course
+--------------------------------------------------------------->
+<div class="mo-widget-wrap">
+  <div class="mo-widget-course">
+    <div class="mo-course-bg">
+      <div class="mo-course-text">
+        <p>ECOLIAN C.C</p>
+        <p>COURSE</p>
+      </div>
+      <div class="mo-course-map-img"></div>
+      <div class="mo-course-close">
+        <i class="fa-regular fa-circle-xmark"></i>
+      </div>
+      <div class="mo-course-hole-wrap">
+        <div id="holeNum" class="mo-course-hole-num"></div>
+        <div id="imgbox" class="mo-course-hole-img">
+          <div class="hole-img hole-img-1"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!---------------------------------------------------------------------
                         main footer
 ---------------------------------------------------------------------->
         <footer>

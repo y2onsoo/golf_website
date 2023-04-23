@@ -71,7 +71,7 @@ window.onload = function () {
   const input_pw = document.querySelector("input[type=password]");
   const id_error = document.querySelector(".id_error");
   const pw_error = document.querySelector(".pw_error");
-  console.log(pw_show_hide, input_id, input_pw, id_error, pw_error);
+  // console.log(pw_show_hide, input_id, input_pw, id_error, pw_error);
 
   input_id.addEventListener("click", function () {
     id_error.style.display = "block";
@@ -90,10 +90,8 @@ window.onload = function () {
       i = true;
     }
   });
-};
 
-////////////////////////////widget 모달 모음
-window.onload = function () {
+  ////////////////////////////widget 모달 모음
   $(".login").click(function () {
     $(".modal-login,.modal-login-bg").show();
   });
@@ -108,7 +106,7 @@ window.onload = function () {
     $(".mo-widget-wrap,.mo-widget-course").hide();
   });
   //
-  $(".ham-bar").click(function(){
+  $(".ham-bar").click(function () {
     $("#gnb.mo-gnb").show();
   });
   // $(".ham-bar").click(function(){
@@ -116,44 +114,20 @@ window.onload = function () {
   // });
 };
 
-
-
-// ///////////////////sub페이지-슬라이더
-const swiper1 = new Swiper(".first-slide", {
-  direction: "horizontal",
-  loop: true,
-  spaceBetween: 0,
-  slidesPerView: "auto",
-  speed: 4000,
-  // effect: "fade",
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: true,
-  },
-  // pagination: {
-  //   el: ".swiper-pagination",
-  // },
+$(document).ready(function () {
+  for (let i = 1; i < 10; i++) {
+    const id = `<span class="mo-course-span-${i}" onclick="showimg(${i})">${i}</span>`;
+    $("#holeNum").append(id);
+  }
 });
 
+//버튼 클릳시 이미지 보이게
+const showimg = (gubun) => {
+  $("#imgbox").empty();
 
-///
-window.onload = function () {
- $('.mo-course-span-2').click(function(){
-    $('.hole-img-2').show()
- })
-}
-
-
-
-
-
-////////////////////////////미디어퀴리 
-//모바일사이즈 햄버거바 
-window.onload = function () {
-
-}
-
-
-//캘런터
-/////////////캘랜더
-$('p[class="dates"]').daterangepicker();
+  $("#imgbox").append(
+    `
+    <div class="hole-img hole-img-${gubun}"></div>
+    `
+  );
+};
