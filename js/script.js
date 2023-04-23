@@ -130,10 +130,18 @@ const swiper1 = new Swiper(".first-slide", {
     delay: 2000,
     disableOnInteraction: true,
   },
-  pagination: {
-    el: ".swiper-pagination",
-  },
+  // pagination: {
+  //   el: ".swiper-pagination",
+  // },
 });
+
+
+///
+window.onload = function () {
+ $('.mo-course-span-2').click(function(){
+    $('.hole-img-2').show()
+ })
+}
 
 
 
@@ -144,3 +152,8 @@ const swiper1 = new Swiper(".first-slide", {
 window.onload = function () {
 
 }
+
+
+//캘런터
+/////////////캘랜더
+$('p[class="dates"]').daterangepicker();

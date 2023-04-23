@@ -601,9 +601,31 @@ main {
 .reservation-wrap{
   height:calc(100% - 150px);
   background-color: #fff;
+  padding: 0  60px;
 }
-.reservation-wrap .reserve-header{}
-.reservation-wrap .reserve-date-wrap{}
+.reservation-wrap .reserve-header{
+  height: 10%;
+  background-color: #b18e64;
+  padding: 10px 0;
+}
+.reservation-wrap .reserve-header h2,
+.reservation-wrap .reserve-header p{
+  text-align: center;
+}
+
+.reservation-wrap .reserve-header h2{
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.reservation-wrap .reserve-header p{
+  font-size: 18px;
+}
+
+.reservation-wrap .reserve-date-wrap{
+  height: 90%;
+  background-color: rgb(116, 106, 82);
+}
 
 
 
