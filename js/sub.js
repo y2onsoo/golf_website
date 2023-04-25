@@ -48,18 +48,19 @@ $.ajax({
 });
 
 // ///////////////////sub페이지-슬라이더
-const swiper1 = new Swiper(".first-slide", {
-  direction: "horizontal",
-  loop: true,
-  spaceBetween: 0,
-  slidesPerView: "auto",
-  speed: 4000,
-  // effect: "fade",
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: true,
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+var swiper2 = new Swiper(".mySwiper2", {
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
-  // pagination: {
-  //   el: ".swiper-pagination",
-  // },
+  thumbs: {
+    swiper: swiper,
+  },
 });

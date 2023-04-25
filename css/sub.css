@@ -454,6 +454,7 @@ a:hover {
 
 .widget-wrap {
   z-index: 1000;
+  cursor: pointer;
 }
 
 .widget-wrap .weather div.tab {
@@ -657,34 +658,72 @@ main {
                      main-sub슬라이더
 *************************************************************/
 .facilties {
-  height: 600px;
-  background-color: pink;
+  height: 700px;
+  background-color:#846136;
   position: relative;
+  padding: 0 60px;
 }
 
-.first-slide{
-  position: relative;
-  height: 600px;
-  /* background-color: #555; */
-}
-
-.swiper-wrapper {
-  display: flex;
+.swiper {
   width: 100%;
-  padding: 100px;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+
+.mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
 }
 
 .swiper-slide img {
+  display: block;
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  object-fit: cover;
 }
 
-/* .swiper .swiper-pagination-bullet {
-  background-color: #000;
-} */
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /************************************************************
                       main-코스소개(.couuse-intro)
@@ -738,6 +777,8 @@ main {
   height: 700px;
   background: url(../images/bg-course-map.jpg);
   background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 /************************************************************
