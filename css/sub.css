@@ -464,6 +464,10 @@ a:hover {
   position: relative;
 }
 
+.widget-wrap > ul > li{
+  margin-bottom: 10px;
+}
+
 .widget-wrap>ul>li.home {
   display: none;
 }
