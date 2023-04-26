@@ -58,6 +58,15 @@ $(".course span").click(function () {
 $(".mo-course-close").click(function () {
   $(".mo-widget-wrap,.mo-widget-course").hide();
 });
+
+$(".select-location span,.select-location p").click(function () {
+  $(".location-hide").show();
+});
+$(".location-hide a").click(function () {
+  $(".location-hide").hide();
+});
+
+
 }
 
 $(document).ready(function () {
@@ -79,3 +88,40 @@ const showimg = (gubun) => {
 };
 
 
+//////지역선택하면 텍스트 바뀜
+function spanchange() {
+  document.getElementById("test").innerText = "광산";
+}
+function spanchange1() {
+  document.getElementById("test").innerText = "제천";
+}
+function spanchange2() {
+  document.getElementById("test").innerText = "영광";
+}
+function spanchange3() {
+  document.getElementById("test").innerText = "거창";
+}
+function spanchange4() {
+  document.getElementById("test").innerText = "정선";
+}
+
+/////////topbutton
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
