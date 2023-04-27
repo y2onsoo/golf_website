@@ -125,6 +125,11 @@ header > h1 > a {
   float: left;
 }
 
+#gnb i{
+  font-size: 10px;
+  margin-right: 10px;
+}
+
 #gnb a {
   color: #fff;
   font-size: 19px;
@@ -688,6 +693,22 @@ padding: 0 0 0 50px;
 .select-location p:last-child i{
   font-size: 20px;
   color: #333;
+}
+
+#test{
+  position: relative;
+}
+
+#test i{
+  font-size: 10px;
+  position: absolute;
+  left: -15px;
+  top: 5px;
+}
+
+.location-hide i{
+  font-size: 10px;
+  margin-right: 5px;
 }
 
 .location-hide{

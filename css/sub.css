@@ -128,6 +128,11 @@ header > h1 > a {
   float: left;
 }
 
+#gnb i{
+  font-size: 10px;
+  margin-right: 10px;
+}
+
 #gnb a {
   color: #fff;
   font-size: 19px;
